@@ -1,0 +1,163 @@
+#root {
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*::-webkit-scrollbar {
+	height: 0.3em;
+	max-width: 0.5em;
+}
+
+*::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+}
+
+li {
+	list-style: none;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+textarea {
+	background-color: #ffffff10;
+	padding: 0.5em;
+	min-height: 200px;
+	font-size: 0.9em;
+	font-family: inherit;
+	resize: vertical;
+	border: none;
+	outline: 1px solid #ffffff40;
+}
+
+button {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	color: #fff;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover {
+	border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+	animation-name: borderAnimate;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+}
+
+@keyframes borderAnimate {
+	from {
+		border: 2px solid #646cff;
+	}
+	to {
+		border-color: transparent;
+	}
+}
+
+.main {
+	margin: 0 auto;
+	max-width: 2160px;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.textarea-container {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.form-container {
+	flex: 1 0 min(250px, 99%);
+	display: flex;
+	justify-content: flex-start;
+	text-align: start;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.btn-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.tab-section {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.tab {
+	padding: 0.5em;
+	border-radius: 5px;
+	background-color: #1a1a1a;
+}
+
+.tab,
+.tab label {
+	cursor: pointer;
+}
+
+.tab:has(input[type="radio"]:checked) {
+	background-color: #646cff;
+}
+
+.tab:hover {
+	outline: 1px solid #646cff;
+}
+
+.result {
+	max-height: 700px;
+	overflow: auto;
+	width: fit-content;
+}
+
+.table {
+	min-width: 240px;
+	width: calc(100vw - 2em);
+	max-width: 350px;
+	background-color: #ffffff30;
+	display: flex;
+	flex-direction: column;
+}
+
+.table a {
+	color: #fff !important;
+	font-weight: normal;
+	text-decoration: inherit;
+	position: relative;
+	padding: 7px;
+	cursor: pointer;
+}
+
+.table a:hover {
+	text-decoration: underline;
+}
+
+.table a:nth-child(even) {
+	background-color: #ffffff70;
+}
