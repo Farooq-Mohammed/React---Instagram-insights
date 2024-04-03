@@ -1,10 +1,13 @@
 #root {
 	margin: 0 auto;
+
 	--white-text: rgba(255, 255, 255, 0.87);
 	--primary: #646cff;
 
 	/* Background */
-	--dark-bg: #1a1a1a;
+	--dark-bg-1: #111111;
+	--dark-bg-2: #1a1a1a;
+	--dark-bg-3: #202020;
 }
 
 * {
@@ -35,13 +38,14 @@ input[type="radio"] {
 }
 
 textarea {
-	background-color: #202020;
 	padding: 0.5em;
 	min-height: 200px;
 	font-size: 0.9em;
 	font-family: inherit;
 	resize: vertical;
 	border: none;
+	color: var(--white-text);
+	background-color: var(--dark-bg-3);
 	outline: 1px solid #ffffff40;
 }
 
@@ -52,13 +56,13 @@ button {
 	font-size: 1em;
 	font-weight: 500;
 	font-family: inherit;
-	color: #fff;
-	background-color: #1a1a1a;
+	color: var(--white-text);
+	background-color: var(--dark-bg-2);
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
 button:hover {
-	border-color: #646cff;
+	border-color: var(--primary);
 }
 
 button:focus,
@@ -70,7 +74,7 @@ button:focus-visible {
 
 @keyframes borderAnimate {
 	from {
-		border: 2px solid #646cff;
+		border: 2px solid var(--primary);
 	}
 	to {
 		border-color: transparent;
@@ -80,7 +84,7 @@ button:focus-visible {
 .main {
 	margin: 0 auto;
 	padding: 1rem;
-	max-width: 2160px;
+	max-width: 1440px;
 
 	display: flex;
 	flex-direction: column;
@@ -93,7 +97,7 @@ button:focus-visible {
 	gap: 0.4em;
 	justify-content: space-around;
 	align-items: center;
-	color: #fff;
+	color: var(--white-text);
 	box-shadow: 0px 3px 3px #ffffff10;
 }
 
@@ -103,7 +107,7 @@ button:focus-visible {
 	gap: 0.2em;
 	align-items: center;
 	text-align: center;
-	color: #646cff;
+	color: var(--primary);
 	cursor: pointer;
 }
 
@@ -116,7 +120,7 @@ button:focus-visible {
 }
 
 .navbar ul li a {
-	color: #fff;
+	color: var(--white-text);
 	padding: 0.7em 1.2em;
 	border-radius: 0.5em;
 	cursor: pointer;
@@ -164,7 +168,7 @@ button:focus-visible {
 .tab {
 	padding: 0.5em;
 	border-radius: 5px;
-	background-color: #1a1a1a;
+	background-color: var(--dark-bg-2);
 }
 
 .tab,
@@ -173,11 +177,11 @@ button:focus-visible {
 }
 
 .tab:has(input[type="radio"]:checked) {
-	background-color: #646cff;
+	background-color: var(--primary);
 }
 
 .tab:hover {
-	outline: 1px solid #646cff;
+	outline: 1px solid var(--primary);
 }
 
 .result {
@@ -197,7 +201,7 @@ button:focus-visible {
 }
 
 .table a {
-	color: #fff !important;
+	color: var(--white-text) !important;
 	font-weight: normal;
 	text-decoration: inherit;
 	position: relative;
